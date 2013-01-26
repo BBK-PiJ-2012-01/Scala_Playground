@@ -1,4 +1,4 @@
-package one
+package functions
 
 /**
  * Instead of returning null when the function goes wrong,

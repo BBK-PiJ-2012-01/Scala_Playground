@@ -1,4 +1,4 @@
-package one
+package match_examples
 
 /**
  * User: Sam Wright
@@ -24,11 +24,15 @@ object CaseClass extends App {
   // And the constructor values are accessible
   assert(term.value == 3)
 
-  // Above example shows thats
+  // Above example shows that the match block
+  // is deconstructing the Term and Func objects,
+  // passing their constructor parameters to the case function.
+
+
+  trait Thing
+  case class Term(value:Int) extends Thing
+  case class Func(thing:Thing) extends Thing
 }
 
 
-trait Thing
-case class Term(value:Int) extends Thing
-case class Func(thing:Thing) extends Thing
 

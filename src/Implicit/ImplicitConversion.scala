@@ -1,4 +1,4 @@
-package one
+package Implicit
 
 /**
  * User: Sam Wright
@@ -29,6 +29,10 @@ object ImplicitConversion extends App {
   makeAnimalSpeak(convertToAnimal(bird))
 
   makeAnimalSpeak(bird)
+
+  // So bird can now fly and speak!!!
+  bird.fly()
+  bird.speak()
 
 }
 

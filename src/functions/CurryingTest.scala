@@ -1,4 +1,4 @@
-package one
+package functions
 
 import scala.collection.mutable.ListBuffer
 
@@ -7,11 +7,12 @@ import scala.collection.mutable.ListBuffer
  * Date: 25/01/2013
  * Time: 18:56
  */
-object Currying {
-  def addNtoM(n:Int)(m:Int) : Int = { n + m }
-}
 
 object CurryingTest extends App {
+
+  object Currying {
+    def addNtoM(n:Int)(m:Int) : Int = { n + m }
+  }
   // Simple test
   println("3 + 4 = " + Currying.addNtoM(3)(4))
 

@@ -1,4 +1,4 @@
-package one
+package oo_design
 
 /**
  * User: Sam Wright
@@ -6,6 +6,18 @@ package one
  * Time: 12:46
  */
 object Generics extends App {
+  class GenericClass[T <: Animal] {
+    def print(obj: T) { obj.speak() }
+  }
+
+trait Animal {
+    def speak()
+  }
+
+  trait Dolphin extends Animal {
+    def swim()
+  }
+
   def print[T <: Animal](obj: T) = { obj.speak() }
 
   val dolphin = new Dolphin {
@@ -17,16 +29,4 @@ object Generics extends App {
   print(dolphin)
 }
 
-class GenericClass[T <: Animal] {
-  def print(obj: T) { obj.speak() }
-}
-
-
-trait Animal {
-  def speak()
-}
-
-trait Dolphin extends Animal {
-  def swim()
-}
 
