@@ -22,6 +22,4 @@ object Covariance extends App {
   requiresSuperClass(covariant_cont)
   requiresClass(covariant_cont)
   // requiresSubClass(covariant_cont)
-
-
 }
